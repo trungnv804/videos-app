@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AngularJS Videos Tutorial Application
 
 ## Overview
@@ -20,7 +19,3 @@ npm start
 ```
 - Run `npm start`
 - navigate your browser to `http://localhost:8000/app/index.html` to see the app running in your browser.
-	
-=======
-# videos-app
->>>>>>> 1dfae33b6b3716093a322ba307ff81b82dbb3348
