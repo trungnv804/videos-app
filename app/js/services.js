@@ -2,18 +2,13 @@
 
 /* Services */
 
-var phonecatServices = angular.module('phonecatServices', ['ngResource']);
+var videoServices = angular.module('videoServices', ['ngResource']);
 
-phonecatServices.factory('Phone', ['$resource',
+videoServices.factory('Youtube', ['$resource',
   function($resource){
+    var datas = (localStorage.getItem('videos')!==null) ? JSON.parse(localStorage.getItem('videos')) : [];
+    localStorage.setItem('todos', JSON.stringify($scope.todos));
     return $resource('phones/:phoneId.json', {}, {
       query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
     });
-  }]);
-phonecatServices.factory('Me', ['$resource',
-  function($resource){
-    return {
-      name: 'Trung',
-      age: '29'
-    };
   }]);

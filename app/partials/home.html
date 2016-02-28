@@ -1,0 +1,26 @@
+<div class="well">
+    <div class="row" ng-controller="VideoController">
+        <form id="videoForm"  class="form-inline" ng-submit="addVideo()" >
+            <div class="form-group">
+                <label class="sr-only">Video youtube link</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-link"></i></div>
+                    <input type="text" class="form-control" ng-model="link" placeholder="Enter an youtube video id">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="media" ng-repeat="video in data">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" ng-src="{{video.image}}" alt="Youtube">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{video.link}}</h4>
+        </div>
+    </div>
+</div>
